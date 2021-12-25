@@ -30,4 +30,10 @@ print("your name is", name)
 age = input("How old are you? ")
 print(f"your age: {age}")
 
-#66
+# use of argv
+from sys import argv
+
+arg1, a2 = argv
+
+print("this is arg1", arg1)
+print("second arg:", a2)
