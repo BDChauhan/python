@@ -30,3 +30,5 @@ target = open(filename, 'r')
 print('------------file after write------------')
 for each in target:
     print(each)
+    
+# other file related exercises : 20,23
