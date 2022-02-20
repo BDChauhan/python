@@ -9,7 +9,18 @@
 #     2. Keyword args (a,b) --> (a=2, b=3)
 #     3. default value (a,b=12) --> (2)
 #     4. variable length args (a, *b) --> (2,3,4,5) here b = (3,4,5)
+#     -  Keyworded variable length arg --> same as 4. but we need to mention keyword also
+#        (a, **data) --> (2, age = 22, city = "Amd")
+#    Global keyword - to explicitly specify variable as global in local scope
+#    global a
+#    a = 15 --> will affect local 'a' also
+#    globals() - returns all global vars --> x = globals()['a'] (only one var 'a')
+#    globals()['a'] = 15 --> to change global var without affecting local var.
+
     
+from re import L
+
+
 def totalSnacks (snacks):
     print(f"you have {snacks} type of snacks!!")
 
@@ -82,3 +93,20 @@ print("id of a", id(a))
 # moment you change value, id would be changed - reason---> here 'int' is immutable so new id
 # if you will try with 'list' --> then id would not be changed
 
+# pass list to function
+
+lst = [11,2,34,334,556,34,67,9,25]
+
+def count(list):
+    even = 0
+    odd = 0
+    for i in list:
+        if i%2==0:
+            even+=1
+        else:
+            odd+=1
+    return even,odd
+
+e,o = count(lst)
+print("even", e)
+print("odd", o)
