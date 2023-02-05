@@ -12,7 +12,7 @@ print(it.__next__()) #8
 
 print(next(it)) #alternative way to use
 
-# create ow iterator - need to create one class with two functions - next and iter
+# create own iterator - need to create one class with two functions - next and iter
 
 class TopTen:
     def __init__(self) -> None:
@@ -22,7 +22,7 @@ class TopTen:
         return(self)
     
     def __next__(self):
-        if self.num <= 10:
+        if self.num <= 2:
             val = self.num
             self.num += 1
             return val
@@ -32,6 +32,8 @@ class TopTen:
 vals = TopTen()
 
 print(vals.__next__())
+print(next(vals))
+print(next(vals))
 print("loop")
 for i in vals:
     print(i)

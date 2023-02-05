@@ -33,7 +33,7 @@ print(f"your age: {age}")
 # use of argv
 from sys import argv
 
-arg1, a2 = argv
+arg1, a2 = argv, argv
 
 print("this is arg1", arg1)
 print("second arg:", a2)

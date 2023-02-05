@@ -21,6 +21,8 @@ def sqtopten():
         n += 1
         
 val1 = sqtopten()
-print(next(val1))
-for i in val1:
-    print(i)
+l = list(val1)
+print(l)
+# print(next(val1))
+# for i in val1:
+#     print(i)

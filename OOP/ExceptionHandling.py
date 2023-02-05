@@ -4,10 +4,11 @@
 # in real time practice, if we open any file and exception occurs, then we should close it also...same with the database
 
 
-a = int(input())
+
 
 
 try:
+    a = int(input())
     print("res opened")
     b = int(input())
     print(b)
